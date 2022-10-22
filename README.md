@@ -12,6 +12,9 @@ module "aws_eks" {
     node_group_name  = "eks_cluster_node_group"
     instance_types   = ["t2.micro"]
     ami_type         = "AL2_x86_64"
+    desired_number_of_nodes = "2"
+    max_number_of_nodes = "2"
+    min_number_of_nodes = "2"
 
     cidr_block                = "10.50.0.0/16"
     vpc_name                  = "eks_cluster_vpc"
@@ -28,6 +31,7 @@ module "aws_eks" {
 ```
 
 To see the outputs of ec2 instance follow the below instructions.
+
 1. Create a file called outputs.tf
 2. Copy the below content into outputs.tf
 

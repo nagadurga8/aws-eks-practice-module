@@ -18,6 +18,18 @@ variable "ami_type" {
   description = "provide the ami type for eks cluster"
 }
 
+variable "desired_number_of_nodes" {
+  description = "provide the value for ec2 instance desired count"
+}
+
+variable "max_number_of_nodes" {
+  description = "provide the value for ec2 instance maximum count"
+}
+
+variable "min_number_of_nodes" {
+  description = "provide the value for ec2 instance minimum count"
+}
+
 #----------------------------------------------------------------
 #                       VPC Variables                           #
 #----------------------------------------------------------------

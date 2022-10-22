@@ -61,7 +61,3 @@ variable "instance_type" {
 variable "key_pair_name" {
   description = "Provide the key pair name to login into ec2 instance"
 }
-
-variable "ec2_instances_count" {
-  description = "Provide the number for how many ec2 instances needs to be created"
-}

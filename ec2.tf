@@ -7,11 +7,11 @@ resource "aws_instance" "eks-servers" {
   count                  = 1
   vpc_security_group_ids = [aws_default_security_group.eks-sg.id]
   subnet_id              = element(aws_subnet.eks-public-subnets.*.id, count.index)
-  user_data              = file("user_data.sh")
+  user_data              = file(".terraform/modules/aws_eks/user_data.sh")
 
 
 
   tags = {
-    Name = "${var.ec2_instance_name}-${count.index + 1}"
+    Name = var.ec2_instance_name
   }
 }

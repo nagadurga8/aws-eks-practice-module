@@ -19,7 +19,7 @@ module "aws_eks" {
     public_subnet_cidr_blocks = ["10.50.0.0/17", "10.50.128.0/17"]
     public_subnet_name        = "eks_cluster_subnets"
 
-    ec2_instance_name   = "eks_ec2_instance"
+    ec2_instance_name   = "eks_login_instance"
     ami_id              = "ami-09d3b3274b6c5d4aa"
     instance_type       = "t2.micro"
     key_pair_name       = "lab_keypair"

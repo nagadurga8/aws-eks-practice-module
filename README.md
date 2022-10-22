@@ -15,7 +15,7 @@ module "aws_eks" {
 
     cidr_block                = "10.50.0.0/16"
     vpc_name                  = "eks_cluster_vpc"
-    availability_zone         = ["us-east-1a", "us-east-1b", "us-east-1c", "us-east-1d", "us-east-1e", "us-east-1f"]
+    availability_zone         = ["us-east-1a", "us-east-1b", "us-east-1c"]
     public_subnet_cidr_blocks = ["10.50.0.0/17", "10.50.128.0/17"]
     public_subnet_name        = "eks_cluster_subnets"
 

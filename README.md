@@ -29,6 +29,38 @@ module "aws_eks" {
 
 }
 ```
+## Inputs for EKS Cluster
+
+| Key | Value |
+| ------ | ------ |
+| eks_cluster_name | Name of the eks cluster |
+| node_group_name | Name of the node group |
+| instance_types | Instance types used in node group to deploy the nodes |
+| ami_type | AMI type which will be used to deploy the nodes] |
+| desired_number_of_nodes | Number of nodes requierd to run all the time |
+| max_number_of_nodes | Maximum number of nodes in the node group |
+| min_number_of_nodes | Mimimum number of nodes in the node group |
+
+## Inputs for VPC Creation
+
+| Key | Value |
+| ------ | ------ |
+| cidr_block | IP address range to create VPC |
+| vpc_name | Name of the VPC |
+| availability_zone | Availability Zones information to create subnets |
+| public_subnet_cidr_blocks | Subnets IP range to create the subnets |
+| public_subnet_name | Name of the subnet |
+
+## Inputs for EC2 Instance Creation
+| EC2 Instance will be used to work on the EKS Cluster |
+| Key | Value |
+| ------ | ------ |
+| ec2_instance_name | Name of the ec2 instance |
+| ami_id | AMI id to create ec2 instance |
+| instance_type | Instance type to create the ec2 instance |
+| key_pair_name | key pair name to ssh into ec2 instance |
+
+
 If you are facing any issues while deploying the pods, it might be the issue with CPU & Memory of the cluster
 
 In this case, change the instane types to t2.medium in the module
@@ -67,3 +99,4 @@ output "kubeconfig-certificate-authority-data" {
 ```hcl
 aws eks update-kubeconfig --region <region-code> --name <cluster-name>
 ```
+

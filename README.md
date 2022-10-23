@@ -52,3 +52,8 @@ output "kubeconfig-certificate-authority-data" {
   value = module.aws_eks.kubeconfig-certificate-authority-data
 }
 ```
+## Once EKS Cluster is deployed, run the below command to access the cluster
+
+```hcl
+aws eks update-kubeconfig --region <region-code> --name <cluster-name>
+```

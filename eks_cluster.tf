@@ -16,3 +16,18 @@ resource "aws_eks_cluster" "eks_cluster" {
   ]
 }
 
+# SG created by EKS
+data "aws_security_group" "eks_cluster_sg" {
+  id = aws_eks_cluster.eks_cluster.vpc_config[0].cluster_security_group_id
+}
+
+# SG Rule which you would like to add
+resource "aws_security_group_rule" "rule-1" {
+  type        = "ingress"
+  from_port   = 0
+  to_port     = 0
+  protocol    = -1
+  cidr_blocks = ["0.0.0.0/0"]
+
+  security_group_id = data.aws_security_group.eks_cluster_sg.id
+}

@@ -52,8 +52,7 @@ module "aws_eks" {
 | public_subnet_name | Name of the subnet |
 
 ## Inputs for EC2 Instance Creation
-| EC2 Instance will be used to work on the EKS Cluster |
-|------ | ------ |
+
 | Key | Value |
 | ------ | ------ |
 | ec2_instance_name | Name of the ec2 instance |

@@ -29,6 +29,10 @@ module "aws_eks" {
 
 }
 ```
+If you are facing any issues while deploying the pods, it might be the issue with CPU & Memory of the cluster
+In this case, change the ```hcl instance_types   = ["t2.micro"] to instance_types   = ["t2.medium"]```
+If required, increase the number of nodes as well.
+
 
 To see the outputs of ec2 instance follow the below instructions.
 

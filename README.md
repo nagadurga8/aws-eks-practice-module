@@ -33,7 +33,9 @@ If you are facing any issues while deploying the pods, it might be the issue wit
 
 In this case, change the instane types to t2.medium in the module
 
-```sh instance_types   = ["t2.micro"] to instance_types   = ["t2.medium"] ```
+```sh
+From instance_types = ["t2.micro"] to instance_types = ["t2.medium"]
+```
 
 If required, increase the number of nodes as well.
 

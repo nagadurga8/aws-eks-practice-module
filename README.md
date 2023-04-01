@@ -6,7 +6,7 @@ To create an AWS EKS cluster for practice purpose, please use below module
 
 ```hcl
 module "aws_eks" {
-    source = "git::https://github.com/mskrishna2808/aws-eks-practice-module.git?ref=1.0.0"
+    source = "git::https://github.com/nagadurga8/aws-eks-practice-module.git?ref=1.0.0"
 
     eks_cluster_name = "eks_cluster"
     node_group_name  = "eks_cluster_node_group"

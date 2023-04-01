@@ -8,8 +8,8 @@ To create an AWS EKS cluster for practice purpose, please use below module
 module "aws_eks" {
     source = "git::https://github.com/nagadurga8/aws-eks-practice-module.git?ref=1.0.0"
 
-    eks_cluster_name = "eks_cluster"
-    node_group_name  = "eks_cluster_node_group"
+    eks_cluster_name = "petclinic_eks_cluster"
+    node_group_name  = "petclinic_eks_cluster_node_group"
     instance_types   = ["t2.micro"]
     ami_type         = "AL2_x86_64"
     desired_number_of_nodes = "2"
@@ -22,10 +22,10 @@ module "aws_eks" {
     public_subnet_cidr_blocks = ["10.50.0.0/17", "10.50.128.0/17"]
     public_subnet_name        = "eks_cluster_subnets"
 
-    ec2_instance_name   = "eks_login_instance"
-    ami_id              = "ami-09d3b3274b6c5d4aa"
-    instance_type       = "t2.micro"
-    key_pair_name       = "lab_keypair"
+    ec2_instance_name   = "petclinic_eks_login_instance"
+    ami_id              = "ami-007855ac798b5175e"
+    instance_type       = "t2.medium"
+    key_pair_name       = "newkeypair"
 
 }
 ```

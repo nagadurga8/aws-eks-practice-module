@@ -10,7 +10,7 @@ module "aws_eks" {
 
     eks_cluster_name = "petclinic_eks_cluster"
     node_group_name  = "petclinic_eks_cluster_node_group"
-    instance_types   = ["t2.micro"]
+    instance_types   = ["t2.medium"]
     ami_type         = "AL2_x86_64"
     desired_number_of_nodes = "2"
     max_number_of_nodes = "2"

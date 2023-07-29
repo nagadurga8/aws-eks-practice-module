@@ -23,9 +23,9 @@ module "aws_eks" {
     public_subnet_name        = "eks_cluster_subnets"
 
     ec2_instance_name   = "petclinic_eks_login_instance"
-    ami_id              = "ami-007855ac798b5175e"
+    ami_id              = "ami-053b0d53c279acc90"
     instance_type       = "t2.medium"
-    key_pair_name       = "newkeypair"
+    key_pair_name       = "North-verginia"
 
 }
 ```

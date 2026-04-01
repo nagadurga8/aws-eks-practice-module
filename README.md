@@ -10,8 +10,8 @@ module "aws_eks" {
 
     eks_cluster_name = "petclinic_eks_cluster"
     node_group_name  = "petclinic_eks_cluster_node_group"
-    instance_types   = ["t2.medium"]
-    ami_type         = "AL2_x86_64"
+    instance_types   = ["t3.small"]
+    ami_type         = "AL2023_x86_64_STANDARD"
     desired_number_of_nodes = "2"
     max_number_of_nodes = "2"
     min_number_of_nodes = "2"
@@ -23,9 +23,9 @@ module "aws_eks" {
     public_subnet_name        = "eks_cluster_subnets"
 
     ec2_instance_name   = "petclinic_eks_login_instance"
-    ami_id              = "ami-053b0d53c279acc90"
-    instance_type       = "t2.medium"
-    key_pair_name       = "North-verginia"
+    ami_id              = "ami-04680790a315cd58d"
+    instance_type       = "t3.small"
+    key_pair_name       = "jenkins_us-east_1"
 
 }
 ```
